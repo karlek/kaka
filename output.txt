@@ -1,2 +1,1 @@
-Asdf=asd;
-PHPSESSID=ujg5sthsdq3dfh6c0onobpgp45
+CookieName=CookieValue;
